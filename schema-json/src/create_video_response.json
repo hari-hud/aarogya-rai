@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "id": "CreateVideoResponse",
+    "description": "Response schema for create video",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "likes": {
+        "type": "string"
+      },
+      "dis_likes": {
+        "type": "string"
+      },
+      "views": {
+        "type": "string"
+      }
+    },
+    "required": ["id", "name"]
+  }

@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "id": "CreateVideoRequest",
+    "description": "Request schema for creating video",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": ["name"]
+  }
+  
