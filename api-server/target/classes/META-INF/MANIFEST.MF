@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Implementation-Title: wellth
+Implementation-Version: 0.0.1
+Main-Class: co.in.wellth.App
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wellth
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
