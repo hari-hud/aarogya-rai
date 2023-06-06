@@ -4,7 +4,7 @@
     "description": "Response schema for create video",
     "properties": {
       "id": {
-        "type": "string"
+        "type": "integer"
       },
       "title": {
         "type": "string"
@@ -16,13 +16,13 @@
         "type": "string"
       },
       "likes": {
-        "type": "string"
+        "type": "integer"
       },
       "dis_likes": {
-        "type": "string"
+        "type": "integer"
       },
       "views": {
-        "type": "string"
+        "type": "integer"
       }
     },
     "required": ["id", "name"]

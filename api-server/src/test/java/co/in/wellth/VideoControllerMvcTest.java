@@ -19,8 +19,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
-import co.in.wellth.models.Video;
-import co.in.wellth.services.VideoService;
+import in.aarogyarai.models.Video;
+import in.aarogyarai.services.VideoService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest

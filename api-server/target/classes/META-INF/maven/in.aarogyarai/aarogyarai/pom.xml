@@ -8,14 +8,14 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>wellth.co.in</groupId>
-	<artifactId>wellth</artifactId>
-	<version>0.0.1</version>
-	<name>wellth</name>
+	<groupId>in.aarogyarai</groupId>
+	<artifactId>aarogyarai</artifactId>
+	<version>1.0.0</version>
+	<name>aarogyarai</name>
 	<description>Wellness and Health</description>
 	<properties>
 		<java.version>11</java.version>
-   		<start-class>co.in.wellth.App</start-class>
+   		<start-class>in.aarogyarai.App</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -54,7 +54,7 @@
       		<version>1.7.0</version>
    		</dependency>
    		<dependency>
-    		<groupId>in.aarogyarai</groupId>
+    		<groupId>in.aarogyarai.pojo</groupId>
     		<artifactId>aarogyarai</artifactId>
     		<version>1.0.0</version>
 		</dependency>

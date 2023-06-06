@@ -35,7 +35,7 @@ public class CreateVideoResponse {
      * 
      */
     @JsonProperty("id")
-    private String id;
+    private Integer id;
     @JsonProperty("title")
     private String title;
     @JsonProperty("description")
@@ -43,11 +43,11 @@ public class CreateVideoResponse {
     @JsonProperty("url")
     private String url;
     @JsonProperty("likes")
-    private String likes;
+    private Integer likes;
     @JsonProperty("dis_likes")
-    private String disLikes;
+    private Integer disLikes;
     @JsonProperty("views")
-    private String views;
+    private Integer views;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
@@ -57,7 +57,7 @@ public class CreateVideoResponse {
      * 
      */
     @JsonProperty("id")
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -67,11 +67,11 @@ public class CreateVideoResponse {
      * 
      */
     @JsonProperty("id")
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public CreateVideoResponse withId(String id) {
+    public CreateVideoResponse withId(Integer id) {
         this.id = id;
         return this;
     }
@@ -122,46 +122,46 @@ public class CreateVideoResponse {
     }
 
     @JsonProperty("likes")
-    public String getLikes() {
+    public Integer getLikes() {
         return likes;
     }
 
     @JsonProperty("likes")
-    public void setLikes(String likes) {
+    public void setLikes(Integer likes) {
         this.likes = likes;
     }
 
-    public CreateVideoResponse withLikes(String likes) {
+    public CreateVideoResponse withLikes(Integer likes) {
         this.likes = likes;
         return this;
     }
 
     @JsonProperty("dis_likes")
-    public String getDisLikes() {
+    public Integer getDisLikes() {
         return disLikes;
     }
 
     @JsonProperty("dis_likes")
-    public void setDisLikes(String disLikes) {
+    public void setDisLikes(Integer disLikes) {
         this.disLikes = disLikes;
     }
 
-    public CreateVideoResponse withDisLikes(String disLikes) {
+    public CreateVideoResponse withDisLikes(Integer disLikes) {
         this.disLikes = disLikes;
         return this;
     }
 
     @JsonProperty("views")
-    public String getViews() {
+    public Integer getViews() {
         return views;
     }
 
     @JsonProperty("views")
-    public void setViews(String views) {
+    public void setViews(Integer views) {
         this.views = views;
     }
 
-    public CreateVideoResponse withViews(String views) {
+    public CreateVideoResponse withViews(Integer views) {
         this.views = views;
         return this;
     }

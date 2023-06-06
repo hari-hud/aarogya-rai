@@ -1,4 +1,4 @@
-package co.in.wellth.models;
+package in.aarogyarai.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +31,7 @@ public class Video {
 	String title;
 	
 	@Column(name="details")
-	String details;
+	String description;
 	
 	@Column(name="url")
 	String url;
@@ -62,11 +62,11 @@ public class Video {
 	}
 
 	public String getDetails() {
-		return details;
+		return description;
 	}
 
-	public void setDetails(String details) {
-		this.details = details;
+	public void setDetails(String description) {
+		this.description = description;
 	}
 
 	public String getUrl() {

@@ -1,6 +1,9 @@
-package co.in.wellth.controller;
+package in.aarogyarai.controller;
 
+import in.aarogyarai.models.Video;
 import in.aarogyarai.pojo.CreateVideoRequest;
+import in.aarogyarai.pojo.CreateVideoResponse;
+import in.aarogyarai.services.IVideoService;
 
 import java.util.List;
 
@@ -13,14 +16,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.in.wellth.models.Video;
-import co.in.wellth.services.IVideoService;
-import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+import org.modelmapper.ModelMapper;
 
 @RestController
 //@RequestMapping("/api")
@@ -30,9 +31,12 @@ public class VideoController {
 	@Autowired
 	IVideoService videoService;
 	
-	// @RequestMapping( value = "/educations", method = RequestMethod.GET)
-	@GetMapping("/videos")
+	@Autowired
+	ModelMapper modelMapper;
+	
+	// @RequestMapping( value = "/videos", method = RequestMethod.GET)
 	//@Hidden // hides api endpoint from swagger ui
+	@GetMapping("/videos")
 	public List<Video> getVideos()
 	{
 		return this.videoService.getVideos();
@@ -46,12 +50,11 @@ public class VideoController {
 	}
 
 	@PostMapping("/videos")
-	public Video addVideo(@RequestBody CreateVideoRequest request)
+	public CreateVideoResponse addVideo(@RequestBody CreateVideoRequest request)
 	{
-		Video video = new Video();
-		video.setTitle(request.getTitle());
-		video.setDetails(request.getDescription());
-		return this.videoService.addVideo(video);
+		Video video = this.modelMapper.map(request, Video.class);
+		video = this.videoService.addVideo(video);
+		return this.modelMapper.map(video, CreateVideoResponse.class);
 	}
 	
 	@PutMapping("/videos")

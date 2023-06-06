@@ -1,8 +1,8 @@
-package co.in.wellth.services;
+package in.aarogyarai.services;
 
 import java.util.List;
 
-import co.in.wellth.models.Video;
+import in.aarogyarai.models.Video;
 
 
 public interface IVideoService {

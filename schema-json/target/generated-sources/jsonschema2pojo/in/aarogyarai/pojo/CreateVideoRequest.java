@@ -19,7 +19,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "title",
-    "description"
+    "description",
+    "url"
 })
 @Generated("jsonschema2pojo")
 public class CreateVideoRequest {
@@ -28,6 +29,13 @@ public class CreateVideoRequest {
     private String title;
     @JsonProperty("description")
     private String description;
+    /**
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("url")
+    private String url;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
@@ -61,6 +69,31 @@ public class CreateVideoRequest {
         return this;
     }
 
+    /**
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("url")
+    public String getUrl() {
+        return url;
+    }
+
+    /**
+     * 
+     * (Required)
+     * 
+     */
+    @JsonProperty("url")
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public CreateVideoRequest withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
@@ -88,6 +121,10 @@ public class CreateVideoRequest {
         sb.append('=');
         sb.append(((this.description == null)?"<null>":this.description));
         sb.append(',');
+        sb.append("url");
+        sb.append('=');
+        sb.append(((this.url == null)?"<null>":this.url));
+        sb.append(',');
         sb.append("additionalProperties");
         sb.append('=');
         sb.append(((this.additionalProperties == null)?"<null>":this.additionalProperties));
@@ -106,6 +143,7 @@ public class CreateVideoRequest {
         result = ((result* 31)+((this.description == null)? 0 :this.description.hashCode()));
         result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
         result = ((result* 31)+((this.title == null)? 0 :this.title.hashCode()));
+        result = ((result* 31)+((this.url == null)? 0 :this.url.hashCode()));
         return result;
     }
 
@@ -118,7 +156,7 @@ public class CreateVideoRequest {
             return false;
         }
         CreateVideoRequest rhs = ((CreateVideoRequest) other);
-        return ((((this.description == rhs.description)||((this.description!= null)&&this.description.equals(rhs.description)))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.title == rhs.title)||((this.title!= null)&&this.title.equals(rhs.title))));
+        return (((((this.description == rhs.description)||((this.description!= null)&&this.description.equals(rhs.description)))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.title == rhs.title)||((this.title!= null)&&this.title.equals(rhs.title))))&&((this.url == rhs.url)||((this.url!= null)&&this.url.equals(rhs.url))));
     }
 
 }

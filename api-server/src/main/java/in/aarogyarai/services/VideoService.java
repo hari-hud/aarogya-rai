@@ -1,12 +1,12 @@
-package co.in.wellth.services;
+package in.aarogyarai.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import co.in.wellth.models.Video;
-import co.in.wellth.repository.VideoRepository;
+import in.aarogyarai.models.Video;
+import in.aarogyarai.repository.VideoRepository;
 
 @Service
 public class VideoService implements IVideoService {

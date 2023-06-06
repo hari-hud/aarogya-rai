@@ -1,4 +1,4 @@
-package co.in.wellth.models.types;
+package in.aarogyarai.models.types;
 
 public enum Result {
 	WEIGHT_GAIN,

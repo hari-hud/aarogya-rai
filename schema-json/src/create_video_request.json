@@ -8,8 +8,11 @@
       },
       "description": {
         "type": "string"
+      },
+      "url": {
+        "type": "string"
       }
     },
-    "required": ["name"]
+    "required": ["name", "url"]
   }
   
