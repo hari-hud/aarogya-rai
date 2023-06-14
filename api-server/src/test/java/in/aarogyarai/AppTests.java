@@ -1,4 +1,4 @@
-package co.in.wellth;
+package in.aarogyarai;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
